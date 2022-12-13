@@ -9,17 +9,14 @@ using System;
 /// 如：Idle Walk Attack
 /// </summary>
 
-public abstract class StateBase
+public abstract class StateBase<T>
 {
     // 当前状态对象代表的枚举状态
-    public Enum StateType;
-
-    public FSMController controller;
+    public T StateType;
 
     // 首次实例化时的初始化，比构造函数方便
-    public virtual void Init(FSMController controller, Enum stateType)
+    public virtual void Init(FSMController<T> controller,T stateType)
     {
-        this.controller = controller;
         this.StateType = stateType;
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-public class Player_Move : StateBase
+public class Player_Move : StateBase<PlayerState>
 {
     public Player_Controller player;
     private float runTransition = 0;
@@ -22,7 +22,7 @@ public class Player_Move : StateBase
         }
     }
 
-    public override void Init(FSMController controller, Enum stateType)
+    public override void Init(FSMController<PlayerState> controller, PlayerState stateType)
     {
         base.Init(controller, stateType);
         player = controller as Player_Controller;

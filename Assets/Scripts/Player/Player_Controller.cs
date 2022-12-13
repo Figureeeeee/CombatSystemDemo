@@ -5,15 +5,16 @@ using UnityEngine;
 
 public enum PlayerState
 {
+    // 默认
+    Player_None,
     // 移动
     Player_Move,
+    // 攻击
+    Player_Attack,
 }
 
-public class Player_Controller : FSMController
+public class Player_Controller : FSMController<PlayerState>
 {
-    public override Enum CurrentState { get => playerState; set => playerState = (PlayerState)value; }
-
-    private PlayerState playerState;
     public Player_Input input { get; private set; }
     public new Player_Audio audio { get; private set; }
     public Player_Model model { get; private set; }
@@ -29,6 +30,6 @@ public class Player_Controller : FSMController
         characterController = GetComponent<CharacterController>();
 
         // 默认是移动状态
-        ChangeState(PlayerState.Player_Move);
+        ChangeState<Player_Move>(PlayerState.Player_Move);
     }
 }
