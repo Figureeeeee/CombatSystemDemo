@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 7956bfac534bf5242865699ed32e598c
+guid: 8dbf11eb084f048d4a887e0dafacc3ab
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: "\u8D70-\u540E"
+    second: "\u8D70-\u53F3"
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -36,13 +36,13 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: "\u8D70-\u540E"
+      name: "\u8D70-\u53F3"
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 77
+      lastFrame: 81
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: -15
       level: 0
       cycleOffset: 0
       loop: 0
