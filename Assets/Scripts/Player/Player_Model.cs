@@ -7,11 +7,13 @@ public class Player_Model : MonoBehaviour
 {
     private Player_Controller player;
     private Animator animator;
+    public WeaponColider WeaponColider;
 
     public void Init(Player_Controller player)
     {
         this.player = player;
         animator = GetComponent<Animator>();
+        WeaponColider.Init();
     }
 
     // 更新移动相关参数
@@ -33,6 +35,7 @@ public class Player_Model : MonoBehaviour
     {
         // 开启刀光的拖尾
         // 开启伤害检测的触发器
+        WeaponColider.StartSkillHit();
     }
 
     // 停止技能伤害
@@ -40,6 +43,7 @@ public class Player_Model : MonoBehaviour
     {
         // 关闭刀光的拖尾
         // 关闭伤害检测的触发器
+        WeaponColider.StopSkillHit();
     }
 
     // 技能结束
