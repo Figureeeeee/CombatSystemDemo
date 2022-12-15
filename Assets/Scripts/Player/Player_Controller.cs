@@ -32,4 +32,10 @@ public class Player_Controller : FSMController<PlayerState>
         // 默认是移动状态
         ChangeState<Player_Move>(PlayerState.Player_Move);
     }
+
+    // 检查攻击状态
+    public bool CheckAttack()
+    {
+        return input.GetAttackKeyDown();
+    }
 }

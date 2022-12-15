@@ -41,7 +41,6 @@ public abstract class FSMController<T> : MonoBehaviour
         if (stateDic.ContainsKey(stateType)) return stateDic[stateType];
 
         // 库存里没有这个枚举状态，那么就实例化一个并且返回
-        // 反射
         StateBase<T> state = new K();
         state.Init(this, stateType);
         stateDic.Add(stateType, state);
