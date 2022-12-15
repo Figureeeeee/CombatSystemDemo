@@ -38,7 +38,8 @@ public class WeaponColider : MonoBehaviour
         {
             enemyList.Add(other.gameObject);
 
-            // TODO:将伤害实际输出给enemy，附加硬直、击退、击飞、生命值削减
+            // 将伤害实际输出给enemy，附加硬直、击退、击飞、生命值削减
+            other.GetComponent<Enemy_Controller>().Hurt();
         }
     }
 }
