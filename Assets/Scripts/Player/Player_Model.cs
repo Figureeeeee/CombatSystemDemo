@@ -37,6 +37,17 @@ public class Player_Model : MonoBehaviour
         animator.SetBool("攻击", true);
     }
 
+    private void SpawnObject(Skill_SpawnObj spawn)
+    {
+        if (spawn != null && spawn.Prefab != null)
+        {
+            GameObject temp = GameObject.Instantiate(spawn.Prefab.gameObject, null);
+            temp.transform.position = transform.position + spawn.Position;
+            temp.transform.eulerAngles = player.transform.eulerAngles + spawn.Rotation;
+            PlayAudio(spawn.AudioClip);
+        }
+    }
+
     #region 动画事件
 
     // 开始技能伤害
@@ -45,6 +56,11 @@ public class Player_Model : MonoBehaviour
         // 开启刀光的拖尾
         // 开启伤害检测的触发器
         WeaponColider.StartSkillHit(skillData.HitModel);
+
+        // 生成释放时的游戏物体/粒子
+        SpawnObject(skillData.ReleaseModel.SpawnObj);
+        // 音效
+        PlayAudio(skillData.ReleaseModel.AudioClip);
     }
 
     // 停止技能伤害
@@ -58,6 +74,8 @@ public class Player_Model : MonoBehaviour
     // 技能结束
     private void SkillOver()
     {
+        SpawnObject(skillData.EndModel.SpawnObj);
+
         animator.SetBool("攻击", false);
     }
 

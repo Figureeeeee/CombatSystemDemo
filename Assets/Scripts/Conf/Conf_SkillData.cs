@@ -21,7 +21,12 @@ public class Conf_SkillData : ScriptableObject
 [Serializable]
 public class Skill_ReleaseModel
 {
-    
+    // 播放粒子 / 产生游戏物体
+    public Skill_SpawnObj SpawnObj;
+    // 播放音效
+    public AudioClip AudioClip;
+    // 能否旋转
+    public bool CanRotate;
 }
 
 // 技能命中
@@ -44,7 +49,8 @@ public class Skill_HitModel
 [Serializable]
 public class Skill_EndModel
 {
-
+    // 播放粒子 / 产生游戏物体
+    public Skill_SpawnObj SpawnObj;
 }
 
 // 技能产生物体

@@ -1004,10 +1004,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4798515783170104391, guid: 66d7575cbb1e70d4ebd897c8aae38aad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4798515783170104408, guid: 66d7575cbb1e70d4ebd897c8aae38aad, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1052,9 +1048,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4798515783170104410, guid: 66d7575cbb1e70d4ebd897c8aae38aad, type: 3}
-      propertyPath: StandAttackConf
-      value: 
-      objectReference: {fileID: 11400000, guid: d017f5c8e579f674d97232a20e7806a4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66d7575cbb1e70d4ebd897c8aae38aad, type: 3}

@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 0
+  StandAttackConf: {fileID: 11400000, guid: d017f5c8e579f674d97232a20e7806a4, type: 2}
 --- !u!82 &4798515783170104409
 AudioSource:
   m_ObjectHideFlags: 0
