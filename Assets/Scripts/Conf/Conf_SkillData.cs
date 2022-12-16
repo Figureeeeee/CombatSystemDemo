@@ -21,15 +21,23 @@ public class Conf_SkillData : ScriptableObject
 [Serializable]
 public class Skill_ReleaseModel
 {
-    // 伤害数值
-    public int DamageValue;
+    
 }
 
 // 技能命中
 [Serializable]
 public class Skill_HitModel
 {
-
+    // 伤害数值
+    public int DamageValue;
+    // 硬直时间
+    public float HardTime;
+    // 击飞、击退
+    public Vector3 RepelVelocity;
+    // 击飞、击退的过度时间
+    public float RepelTransitionTime;
+    // 命中效果
+    public Conf_SkillHitEF SkillHitEF;
 }
 
 // 技能结束
@@ -37,4 +45,19 @@ public class Skill_HitModel
 public class Skill_EndModel
 {
 
+}
+
+// 技能产生物体
+[Serializable]
+public class Skill_SpawnObj
+{
+    // 生成的预制体
+    public GameObject Prefab;
+    // 生成的音效
+    public AudioClip AudioClip;
+    // 位置
+    public Vector3 Position;
+    // 旋转
+    public Vector3  Rotation;
+    
 }

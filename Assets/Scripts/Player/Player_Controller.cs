@@ -41,4 +41,15 @@ public class Player_Controller : FSMController<PlayerState>
     {
         return input.GetAttackKeyDown();
     }
+
+    public void StandAttack()
+    {
+        model.StartAttack(StandAttackConf);
+        ChangeState<Player_Move>(PlayerState.Player_Move);
+    }
+
+    public void PlayAudio(AudioClip audioClip)
+    {
+        audio.PlayAudio(audioClip);
+    }
 }

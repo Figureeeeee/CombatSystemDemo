@@ -15,16 +15,11 @@ public class Player_Attack : StateBase<PlayerState>
     public override void OnEnter()
     {
         // ¹¥»÷
-        Attack();
+        player.StandAttack();
     }
 
     public override void OnExit() { }
 
     public override void OnUpdate() { }
 
-    public void Attack()
-    {
-        player.model.StartAttack();
-        player.ChangeState<Player_Move>(PlayerState.Player_Move);
-    }
 }
