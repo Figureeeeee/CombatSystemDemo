@@ -21,6 +21,9 @@ public class Player_Controller : FSMController<PlayerState>
 
     public CharacterController characterController { get; private set; }
 
+    // 普通攻击配置
+    public Conf_SkillData StandAttackConf;
+
     private void Start()
     {
         input = new Player_Input();
